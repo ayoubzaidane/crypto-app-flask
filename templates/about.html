@@ -1,5 +1,18 @@
 {% extends "layout.html" %}
-{%  block content %} 
-        <h1>about page</h1>
+{% block content %}
+    <h1>About Page</h1>
+    <p>This is the about page.</p>
+    <h2>Cryptocurrency Data</h2>
+    {% if cryptocurrency_data %}
+        <ul>
+            <li>Name: {{ cryptocurrency_data.BTC.name }}</li>
+            <li>Symbol: {{ cryptocurrency_data.BTC.symbol }}</li>
+            <li>Price: ${{ cryptocurrency_data.BTC.quote.USD.price }}</li>
+            <li>Market Cap: ${{ cryptocurrency_data.BTC.quote.USD.market_cap }}</li>
+            <li>Volume 24h: ${{ cryptocurrency_data.BTC.quote.USD.volume_24h }}</li>
+        </ul>
+    {% else %}
+        <p>No data available</p>
+    {% endif %}
 {% endblock content %}
 
