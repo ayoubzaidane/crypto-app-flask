@@ -1,0 +1,137 @@
+{
+    "id": 5426,
+    "name": "Solana",
+    "symbol": "SOL",
+    "category": "coin",
+    "description": "Solana (SOL) is a cryptocurrency launched in 2020. Solana has a current supply of 577,252,816.8058338 with 459,691,556.8439056 in circulation. The last known price of Solana is 164.90942471 USD and is down -1.18 over the last 24 hours. It is currently trading on 669 active market(s) with $1,216,270,108.80 traded over the last 24 hours. More information can be found at https://solana.com.",
+    "slug": "solana",
+    "logo": "https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png",
+    "subreddit": "solana",
+    "notice": "",
+    "tags": [
+        "pos",
+        "platform",
+        "solana-ecosystem",
+        "cms-holdings-portfolio",
+        "kenetic-capital-portfolio",
+        "alameda-research-portfolio",
+        "multicoin-capital-portfolio",
+        "okx-ventures-portfolio",
+        "layer-1",
+        "ftx-bankruptcy-estate",
+        "sec-security-token",
+        "alleged-sec-securities",
+        "cmc-crypto-awards-2024"
+    ],
+    "tag-names": [
+        "PoS",
+        "Platform",
+        "Solana Ecosystem",
+        "CMS Holdings Portfolio",
+        "Kenetic Capital Portfolio",
+        "Alameda Research Portfolio",
+        "Multicoin Capital Portfolio",
+        "OKX Ventures Portfolio",
+        "Layer 1",
+        "FTX Bankruptcy Estate ",
+        "SEC Security Token",
+        "Alleged SEC Securities",
+        "CMC Crypto Awards 2024"
+    ],
+    "tag-groups": [
+        "ALGORITHM",
+        "CATEGORY",
+        "PLATFORM",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY",
+        "CATEGORY"
+    ],
+    "urls": {
+        "website": [
+            "https://solana.com"
+        ],
+        "twitter": [
+            "https://twitter.com/solana"
+        ],
+        "message_board": [
+            "https://solana.com/news",
+            "https://forums.solana.com"
+        ],
+        "chat": [
+            "https://solana.com/discord",
+            "https://t.me/solana"
+        ],
+        "facebook": [],
+        "explorer": [
+            "https://explorer.solana.com",
+            "https://solana.fm/",
+            "https://solscan.io/",
+            "https://solanabeach.io",
+            "https://www.okx.com/web3/explorer/sol"
+        ],
+        "reddit": [
+            "https://reddit.com/r/solana"
+        ],
+        "technical_doc": [
+            "https://solana.com/solana-whitepaper.pdf"
+        ],
+        "source_code": [
+            "https://github.com/solana-labs"
+        ],
+        "announcement": []
+    },
+    "platform": {
+        "id": "5426",
+        "name": "Solana",
+        "slug": "solana",
+        "symbol": "SOL",
+        "token_address": "So11111111111111111111111111111111111111111"
+    },
+    "date_added": "2020-04-10T00:00:00.000Z",
+    "twitter_username": "solana",
+    "is_hidden": 0,
+    "date_launched": "2020-03-16T00:00:00.000Z",
+    "contract_address": [
+        {
+            "contract_address": "So11111111111111111111111111111111111111111",
+            "platform": {
+                "name": "Solana",
+                "coin": {
+                    "id": "5426",
+                    "name": "Solana",
+                    "symbol": "SOL",
+                    "slug": "solana"
+                }
+            }
+        }
+    ],
+    "self_reported_circulating_supply": null,
+    "self_reported_tags": null,
+    "self_reported_market_cap": null,
+    "infinite_supply": true,
+    "quote": {
+        "USD": {
+            "price": 165.24593124093653,
+            "volume_24h": 1220224796.633183,
+            "volume_change_24h": -33.676,
+            "percent_change_1h": -0.24290009,
+            "percent_change_24h": -0.97588651,
+            "percent_change_7d": 1.05178886,
+            "percent_change_30d": 16.34914446,
+            "percent_change_60d": -12.56961245,
+            "percent_change_90d": 24.24512194,
+            "market_cap": 75962097841.67116,
+            "market_cap_dominance": 2.9991,
+            "fully_diluted_market_cap": 95388617721.94,
+            "tvl": null,
+            "last_updated": "2024-06-02T13:19:00.000Z"
+        }
+    }
+}

@@ -79,4 +79,196 @@ body {
     font-size: 2.5rem;
   }
 
-  
+  /* about.css */
+
+/* Container styles */
+
+
+/* Header styles */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form styles */
+.form-group label {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.form-control {
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Coin container styles */
+.coin-container {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.coin-container .content {
+  margin-bottom: 20px;
+}
+
+.rank-btn {
+  background-color: #ffc107;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+.coin-heading p {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.coin-price h1 {
+  font-size: 2.5rem;
+  color: #28a745;
+}
+
+.coin-price p {
+  font-size: 1.5rem;
+  color: #dc3545;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+thead th {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+}
+
+tbody td {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Stats styles */
+.stats .row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.stats .row:last-child {
+  border-bottom: none;
+}
+
+.stats h4 {
+  margin: 0;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.stats p {
+  margin: 0;
+  font-size: 1rem;
+  color: #34495e;
+}
+
+
+
+
+/* style the bar */
+/* style nav bar */
+ 
+
+/* main.css */
+
+/* Site header styling */
+.site-header {
+  background-color: #1e1e2f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28158, 158, 158, 0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #c1c1d1;
+  padding: 10px 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #fff;
+  background-color: #343a40;
+  border-radius: 5px;
+}
+
+.navbar-nav .nav-link.active {
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 10px;
+}
+
+.navbar-nav .nav-item:first-child {
+  margin-left: 0;
+}
+
+.navbar-nav .nav-item .nav-link {
+  padding: 8px 15px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #fff;
+  background-color: #1e90ff;
+  border-radius: 5px;
+}
+
+/* Additional styles for fixed top navbar */
+.navbar {
+  padding: 0.5rem 1rem;
+}
+
+.container {
+  max-width: 1140px;
+}

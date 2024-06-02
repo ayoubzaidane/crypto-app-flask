@@ -1,18 +1,108 @@
 {% extends "layout.html" %}
+{% block title %}About{% endblock %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
 {% block content %}
+<div class="container">
     <h1>About Page</h1>
     <p>This is the about page.</p>
-    <h2>Cryptocurrency Data</h2>
-    {% if cryptocurrency_data %}
-        <ul>
-            <li>Name: {{ cryptocurrency_data.BTC.name }}</li>
-            <li>Symbol: {{ cryptocurrency_data.BTC.symbol }}</li>
-            <li>Price: ${{ cryptocurrency_data.BTC.quote.USD.price }}</li>
-            <li>Market Cap: ${{ cryptocurrency_data.BTC.quote.USD.market_cap }}</li>
-            <li>Volume 24h: ${{ cryptocurrency_data.BTC.quote.USD.volume_24h }}</li>
-        </ul>
-    {% else %}
-        <p>No data available</p>
-    {% endif %}
-{% endblock content %}
 
+    <form method="POST">
+        <div class="form-group">
+            <label for="symbol">Enter Cryptocurrency Symbol:</label>
+            <input type="text" id="symbol" name="symbol" class="form-control" placeholder="e.g., BTC" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Get Data</button>
+    </form>
+
+    {% if cryptocurrency_data %}
+        <div class="coin-container">
+            <div class="content">
+                <h1>{{ cryptocurrency_data.name }}</h1>
+                {% if cryptocurrency_data.description %}
+                    <p>{{ cryptocurrency_data.description }}</p>
+                {% endif %}
+            </div>
+            <div class="content">
+                <div class="rank">
+                    <span class="rank-btn">Rank # {{ cryptocurrency_data.cmc_rank }}</span>
+                </div>
+                <div class="info">
+                    <div class="coin-heading">
+                        <p>{{ cryptocurrency_data.name }}</p>
+                        {% if cryptocurrency_data.symbol %}
+                            <p>{{ cryptocurrency_data.symbol }}/USD</p>
+                        {% endif %}
+                    </div>
+                    <div class="coin-price">
+                        {% if cryptocurrency_data.quote and cryptocurrency_data.quote.USD and cryptocurrency_data.quote.USD.price %}
+                            <h1>${{ cryptocurrency_data.quote.USD.price }}</h1>
+                        {% else %}
+                            <p>Price data not available</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>1h</th>
+                            <th>24h</th>
+                            <th>7d</th>
+                            <th>30d</th>
+                            <th>60d</th>
+                            <th>90d</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            {% for period in ['1h', '24h', '7d', '30d', '60d', '90d'] %}
+                                <td>
+                                    {% set key = 'percent_change_' + period %}
+                                    {% if cryptocurrency_data.quote and cryptocurrency_data.quote.USD and cryptocurrency_data.quote.USD[key] is not none %}
+                                        <p>{{ '%.2f'|format(cryptocurrency_data.quote.USD[key]) }}%</p>
+                                    {% else %}
+                                        <p>Data not available</p>
+                                    {% endif %}
+                                </td>
+                            {% endfor %}
+                        </tr>
+                    </tbody>
+                    
+                </table>
+            </div>
+            <div class="content">
+                <div class="stats">
+                    <div class="left">
+                        <div class="row">
+                            <h4>24 Hour Low</h4>
+                            {% if cryptocurrency_data.quote and cryptocurrency_data.quote.USD and cryptocurrency_data.quote.USD.low_24h %}
+                                <p>${{ cryptocurrency_data.quote.USD.low_24h }}</p>
+                            {% endif %}
+                        </div>
+                        
+                    </div>
+                    <div class="right">
+                        <div class="row">
+                            <h4>Market Cap</h4>
+                            {% if cryptocurrency_data.quote and cryptocurrency_data.quote.USD and cryptocurrency_data.quote.USD.market_cap %}
+                                <p>${{ cryptocurrency_data.quote.USD.market_cap }}</p>
+                            {% endif %}
+                        </div>
+                        <div class="row">
+                            <h4>Circulating Supply</h4>
+                            {% if cryptocurrency_data.circulating_supply %}
+                                <p>{{ cryptocurrency_data.circulating_supply }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% elif error %}
+        <p>{{ error }}</p>
+    {% endif %}
+</div>
+{% endblock %}
